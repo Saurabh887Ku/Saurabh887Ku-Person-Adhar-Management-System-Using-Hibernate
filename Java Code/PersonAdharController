@@ -1,0 +1,27 @@
+package hibernate_crud_operation.controller;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import hibernate_crud_operation.dao.PersonAdharDao;
+import hibernate_crud_operation.dto.Adhar;
+import hibernate_crud_operation.dto.Person;
+
+public class PersonAdharController {
+	public static void main(String[] args) {
+		PersonAdharDao dao = new PersonAdharDao();
+//		Person person = new Person(3, "Ritik Kumar", "ritik@gmail.com", LocalDate.parse("2006-05-17"));
+//		Adhar adhar = new Adhar(123456789015L,"Munilal Ray","Kushahar Dumma Tola",LocalDate.parse("1935-10-22"));
+//		dao.saveAdharDao(adhar);
+//		dao.savePersonDao(person, adhar.getAdharNo());
+//		Person person = new Person(5,"Shivjee Prasad Yadav","shivjee9661@gmail.com",LocalDate.parse("1971-10-22"),adhar);
+//		dao.savePersonAdharDao(person);
+		
+//		boolean b = dao.deletePersonByIdDao(3);
+//		boolean c = dao.deleteAdharByIdDao(123456789015l);
+		List<Person> list = dao.displayAllDataDao();
+		for(Person person : list) {
+			System.out.println(person);
+		}
+	}
+}
